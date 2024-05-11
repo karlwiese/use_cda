@@ -1,0 +1,36 @@
+default_language_version:
+  python: python3.12
+fail_fast: false
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: check-yaml
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+  - repo: https://github.com/psf/black
+    rev: 24.4.2
+    hooks:
+      - id: black
+        types: ["python"]
+  - repo: https://github.com/MarcoGorelli/absolufy-imports
+    rev: "v0.3.1"
+    hooks:
+      - id: absolufy-imports
+        args: ["--never"]
+        exclude: "src/link2_key_accounts_loader/models/key_accounts_db/alembic/env.py"
+  - repo: https://github.com/charliermarsh/ruff-pre-commit
+    rev: "v0.4.3"
+    hooks:
+      - id: ruff
+  - repo: https://github.com/sqlfluff/sqlfluff
+    rev: 3.0.5
+    hooks:
+      - id: sqlfluff-lint
+        files: "src/link2_key_accounts_loader/.+\\.sql"
+  - repo: https://github.com/python-poetry/poetry
+    rev: "1.8.2"
+    hooks:
+      - id: poetry-check
+      - id: poetry-lock
+        args: ["--no-update"]

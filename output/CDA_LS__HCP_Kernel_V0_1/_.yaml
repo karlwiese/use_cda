@@ -1,0 +1,366 @@
+Entities:
+  Address:
+    Attributes:
+    - Data Type: Entity (HCP)
+      Description: HCP associated with this address.
+      Label: HCP
+      Name: hcp
+      Notes: null
+      Picklist Items: null
+    - Data Type: Boolean
+      Description: Indicates whether this represents the individual's primary address.
+        Only one address can be marked as Primary.
+      Label: Primary
+      Name: primary
+      Notes: null
+      Picklist Items: null
+    - Data Type: Text 80
+      Description: Residential or business street address information including house
+        number and street name.
+      Label: Street Address 1
+      Name: street_address_1
+      Notes: null
+      Picklist Items: null
+    - Data Type: Text 100
+      Description: Additional address details, such as apartment, suite, or building
+        number.
+      Label: Street Address 2
+      Name: street_address_2
+      Notes: null
+      Picklist Items: null
+    - Data Type: Picklist
+      Description: Name of country.
+      Label: Country
+      Name: country
+      Notes: null
+      Picklist Items: Country Items
+    - Data Type: Picklist
+      Description: Name of state, province, or regional area.
+      Label: State
+      Name: state
+      Notes: null
+      Picklist Items: State Items
+    - Data Type: Text 40
+      Description: Name of city or municipality.
+      Label: City
+      Name: city
+      Notes: null
+      Picklist Items: null
+    - Data Type: Text 20
+      Description: May include non-alphanumeric characters. e.g. -
+      Label: Postal Code
+      Name: postal_code
+      Notes: null
+      Picklist Items: null
+    - Data Type: Text 15
+      Description: Geographic coordinate specifying north-south position.
+      Label: Latitude
+      Name: latitude
+      Notes: null
+      Picklist Items: null
+    - Data Type: Text 15
+      Description: Geographic coordinate indicating east-west position.
+      Label: Longitude
+      Name: longitude
+      Notes: null
+      Picklist Items: null
+    - Data Type: Text 40
+      Description: Phone number. May include country code including non-alphanumeric
+        characters. e.g. +, -
+      Label: Phone
+      Name: phone
+      Notes: null
+      Picklist Items: null
+    - Data Type: Text 40
+      Description: Fax number. May include country code including non-alphanumeric
+        characters. e.g. +, -
+      Label: Fax
+      Name: fax
+      Notes: null
+      Picklist Items: null
+    - Data Type: Picklist
+      Description: Indicates whether this address is currently usable for contact
+        purposes.
+      Label: Status
+      Name: status
+      Notes: null
+      Picklist Items: Address Status Items
+    - Data Type: Boolean
+      Description: Indicates whether this represents a home address.
+      Label: Home
+      Name: home
+      Notes: null
+      Picklist Items: null
+    - Data Type: Boolean
+      Description: Indicates whether this represents a business address.
+      Label: Business
+      Name: business
+      Notes: null
+      Picklist Items: null
+    - Data Type: Boolean
+      Description: Indicates whether this represents a billing address.
+      Label: Billing
+      Name: billing
+      Notes: null
+      Picklist Items: null
+    - Data Type: Boolean
+      Description: Indicates whether this represents a shipping address.
+      Label: Shipping
+      Name: shipping
+      Notes: null
+      Picklist Items: null
+    - Data Type: Boolean
+      Description: Indicates whether this represents a shipping address that can accept
+        medical shipments.
+      Label: Sample Shipping
+      Name: sample_shipping
+      Notes: null
+      Picklist Items: null
+    Description: Location information associated with an HCP.
+    Label: Address
+  HCP:
+    Attributes:
+    - Data Type: Text 25
+      Description: Global identifier from Veeva data products
+      Label: Veeva ID
+      Name: VeevaID
+      Notes: null
+      Picklist Items: null
+    - Data Type: Text 50
+      Description: Given name as officially recorded in professional or legal documents.
+      Label: First Name
+      Name: first_name
+      Notes: null
+      Picklist Items: null
+    - Data Type: Text 50
+      Description: Family or surname as officially recorded in professional or legal
+        documents.
+      Label: Last Name
+      Name: last_name
+      Notes: null
+      Picklist Items: null
+    - Data Type: Text 50
+      Description: Secondary given name or initial as officially recorded in professional
+        or legal documents.
+      Label: Middle Name
+      Name: middle_name
+      Notes: null
+      Picklist Items: null
+    - Data Type: Text 10
+      Description: Salutation or title used before a person's name, such as Mr., Mrs.,
+        Dr., etc.
+      Label: Prefix
+      Name: prefix
+      Notes: null
+      Picklist Items: null
+    - Data Type: Text 10
+      Description: Includes professional credentials or generational titles such as
+        I, II, III, IV, but excludes medical degrees.
+      Label: Suffix
+      Name: suffix
+      Notes: null
+      Picklist Items: null
+    - Data Type: Picklist
+      Description: Primary spoken and written language.
+      Label: Primary Language
+      Name: language
+      Notes: null
+      Picklist Items: Language Items
+    - Data Type: Text 80
+      Description: Primary email address.
+      Label: Primary Email
+      Name: email
+      Notes: An email address can be 254 characters in length according to RFCs. However,
+        many common systems can not process email addresses longer than 80. CDA is
+        designed for system interoperability, so it is important to have email addresses
+        that can be used by all systems. In addition, more than 99.9999% of email
+        addresses are less than 80 characters.
+      Picklist Items: null
+    - Data Type: Text 40
+      Description: Primary mobile phone number. May include country code including
+        non-alphanumeric characters. e.g. +, -, (, )
+      Label: Mobile Phone
+      Name: mobile_phone
+      Notes: null
+      Picklist Items: null
+    - Data Type: Text 40
+      Description: Primary office phone number. May include country code including
+        non-alphanumeric characters. e.g. +, -
+      Label: Office Phone
+      Name: office_phone
+      Notes: null
+      Picklist Items: null
+    - Data Type: Text 40
+      Description: Primary fax. May include country code including non-alphanumeric
+        characters. e.g. +, -
+      Label: Fax
+      Name: fax
+      Notes: null
+      Picklist Items: null
+    - Data Type: Picklist
+      Description: Country from primary address.
+      Label: Primary Country
+      Name: country
+      Notes: Denormed from Primary Address.
+      Picklist Items: Country Items
+    - Data Type: Picklist
+      Description: State, province, or regional area from primary address.
+      Label: Primary State
+      Name: state
+      Notes: Denormed from Primary Address
+      Picklist Items: State Items
+    - Data Type: Text 40
+      Description: City or municipality from primary address.
+      Label: Primary City
+      Name: city
+      Notes: Denormed from Primary Address
+      Picklist Items: null
+    - Data Type: Text 20
+      Description: Postal code from primary address. May include non-alphanumeric
+        characters. e.g. -
+      Label: Primary Postal Code
+      Name: postal_code
+      Notes: Denormed from Primary Address
+      Picklist Items: null
+    - Data Type: Picklist
+      Description: The role an individual plays in the life sciences industry, spanning
+        from the development and commercialization of life science products to their
+        delivery and administration in healthcare settings.
+      Label: Type
+      Name: hcp_type
+      Notes: null
+      Picklist Items: Type Items
+    - Data Type: Text 40
+      Description: Unique identifier assigned to healthcare professionals within a
+        country's healthcare system.
+      Label: National Healthcare ID
+      Name: nhid
+      Notes: null
+      Picklist Items: null
+    - Data Type: Picklist
+      Description: The primary medical field or expertise area to which the healthcare
+        professional belongs. Uses the list of specialties.
+      Label: Primary Speciality
+      Name: spec_1
+      Notes: null
+      Picklist Items: Specialty Items
+    - Data Type: Multivalue Picklist
+      Description: All medical fields and expertise areas to which the healthcare
+        provider belongs. Uses the list of specialties.
+      Label: All Specialties
+      Name: all_spec
+      Notes: Always includes spec1
+      Picklist Items: Specialty Items
+    - Data Type: Picklist
+      Description: The primary overarching medical field or expertise area to which
+        the healthcare provider belongs. Uses the list of global specialties.
+      Label: Primary Specialty Group
+      Name: spec_group_1
+      Notes: Automatically populated based on value in spec1
+      Picklist Items: Specialty Group Items
+    - Data Type: Multivalue Picklist
+      Description: All overarching medical fields and expertise areas to which the
+        healthcare provider belongs. Uses the list of global specialties.
+      Label: All Specialty Groups
+      Name: all_spec_group
+      Notes: Automatically populated based on values in allspec
+      Picklist Items: Specialty Group Items
+    - Data Type: Boolean
+      Description: Indicates whether the individual is authorized to prescribe medications.
+      Label: Prescriber
+      Name: prescriber
+      Notes: null
+      Picklist Items: null
+    - Data Type: Picklist
+      Description: The primary medical qualification or degree obtained.
+      Label: Primary Medical Degree
+      Name: degree_1
+      Notes: null
+      Picklist Items: Medical Degree Items
+    - Data Type: Multivalue Picklist
+      Description: Additional medical qualification or degree obtained.
+      Label: All Medical Degrees
+      Name: all_degree
+      Notes: null
+      Picklist Items: Medical Degree Items
+    - Data Type: Picklist
+      Description: Indicates whether the healthcare professional is currently active
+        and working or not.
+      Label: Status
+      Name: status
+      Notes: null
+      Picklist Items: HCP Status Items
+    - Data Type: Picklist
+      Description: 'Indicates the level of importance of this individual to the company,
+        where level 5 indicates the highest level of importance. Can be used to drive
+        business rules. For example: You may want to limit personalized promotions
+        to levels 3 and below. You may also require a single relationship owner for
+        level 5.'
+      Label: Level
+      Name: level
+      Notes: null
+      Picklist Items: Level Items
+    - Data Type: Picklist
+      Description: A categorization of the individual based on their willingness and
+        speed to adopt new medical technologies, treatments, practices, or products.
+      Label: Adopter Type
+      Name: adopter_type
+      Notes: null
+      Picklist Items: Adopter Type Items
+    - Data Type: Boolean
+      Description: Recognized as a key opinion leader in the industry.
+      Label: Key Opinion Leader
+      Name: kol
+      Notes: null
+      Picklist Items: null
+    - Data Type: Boolean
+      Description: Indicates whether the individual is involved in running clinical
+        research studies.
+      Label: Investigator
+      Name: investigator
+      Notes: null
+      Picklist Items: null
+    - Data Type: Boolean
+      Description: Indicates whether the individual is engaged in speaking roles at
+        professional gatherings or educational events for the company.
+      Label: Speaker
+      Name: speaker
+      Notes: null
+      Picklist Items: null
+    - Data Type: Boolean
+      Description: Indicates whether the individual is a target for one or more brands
+        of the company.
+      Label: Target
+      Name: target
+      Notes: null
+      Picklist Items: null
+    Description: Information about a Healthcare Professional (HCP), broadly defined
+      as an individual who plays a role in the development, testing, manufacturing,
+      or commercialization of life science products, or in the delivery and administration
+      of healthcare services related to these products.
+    Label: HCP
+  HCP_Segment:
+    Attributes:
+    - Data Type: Entity (HCP)
+      Description: HCP that belongs to this segment.
+      Label: HCP
+      Name: hcp
+      Notes: null
+      Picklist Items: null
+    - Data Type: Text 50
+      Description: Name of the segment.
+      Label: Name
+      Name: name
+      Notes: null
+      Picklist Items: null
+    - Data Type: Text 50
+      Description: Source system the segment was created in.
+      Label: Source
+      Name: source
+      Notes: null
+      Picklist Items: null
+    Description: A grouping of HCPs based on shared characteristics, behaviors, preferences,
+      or needs. Typically used to tailor marketing, sales, and support efforts more
+      effectively, by acknowledging that different groups may require different approaches
+      or products.
+    Label: Segment

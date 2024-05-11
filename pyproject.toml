@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "use-cda"
+version = "0.1.0"
+description = ""
+authors = ["Karl Wiese <karl.wiese@veeva.com>"]
+readme = "README.md"
+packages = [
+  {include = "cda", from = "src"},
+]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+openpyxl = "^3.1.2"
+pyyaml = "^6.0.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
