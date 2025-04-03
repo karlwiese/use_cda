@@ -375,6 +375,7 @@ def run() -> None:
 
 
 def _add_picklists(wb: Workbook, kernel: Kernel) -> Kernel:
+    """improve me"""
     picklists = set(wb.get_sheet_names()) - {  # noqa
         SHEET_NAME_ATTRIBUTES,
         SHEET_NAME_ENTITIES,
